@@ -1,0 +1,81 @@
+
+\section{Analyse}
+
+\subsection{Stromaufnahme des Mikrocontrollers}
+Die Stromaufnahme des Mikrocontrollers liegt typischerweise
+im Bereich einiger Hundert uA.
+Laut der Produktspezifikation\footnote{\url{http://infocenter.nordicsemi.com/pdf/nRF51822_PS_v3.1.pdf}} kann sie bei RF-Aktivit\"at
+punktuell auf 13mA ansteigen.
+Man darf also guten Gewissens davon ausgehen,
+dass 20mA im regul\"aren Betrieb niemals \"uberschritten werden.
+Bei einer Versorgungsspannung von 3,3V
+ergibt sich somit eine maximale Leistungsaufnahme von
+
+\begin{center}
+	$ 3,3V \cdot 20mA = 0,066W $
+\end{center}
+
+Bei dieser Leistungsaufnahme ist nicht mit einer
+nenneswerten Erw\"armung der Mikrocontroller-Platine zu rechnen.
+
+\subsection{Stromaufnahme der LEDs}
+Im Versuch\footnote{\url{https://redmine.interoberlin.de/ticket/1046}}
+haben wir an einem SK6812-WWA-Streifen mit 5 LEDs
+an 5V Versorgungsspannung
+bei voller Helligkeit
+eine Stromaufnahme von 192mA
+gemessen.
+Daraus ergibt sich eine maximale Stromaufnahme pro LED von aufgerundet
+\begin{center}
+	$ \frac{192mA}{5} = 39mA $
+\end{center}
+
+
+Auf alle vier Streifen hochgerechnet ergibt sich eine
+zu erwartende maximale Stromaufnahme von aufgerundet
+
+\begin{center}
+	$ 4 \cdot 2,5m \cdot 60 \frac{LEDs}{m} \cdot 39mA = 24A $
+\end{center}
+
+Dies entspricht einer maximalen Leistungsaufnahme pro S\"aulenseite von
+
+\begin{center}
+	$ 5V \cdot 24A = 120W $
+\end{center}
+
+\subsection{Temperaturbest\"andigkeit der Aufputzdosen}
+Die Aufputzdosen bestehen laut Angaben des Herstellers
+aus selbstl\"oschendem Polyvinylchlorid
+mit einer nominalen Temperaturbest\"andigkeit bis 60\si{\degree}C
+sowie einer Flammenwidrigkeit bis 850\si{\degree}C.
+
+\subsection{Abmessungen der Aufputzdosen}
+
+TODO
+
+\subsection{ATX-Netzteil-Ausg\"ange m\"ussen belastet werden}
+ATX-Netzteile eignen sich grunds\"atzlich sehr gut
+f\"ur die Verwendung in eigenen L\"osungen.
+F\"ur den vorliegenden Einsatzzweck bieten sie sich u.a. deshalb an,
+weil sie die geregelten 5V
+f\"ur die LEDs
+in der erforderlichen Leistung
+herausf\"uhren.
+Allerdings ist zu ber\"ucksichtigen,
+dass ATX-Netzteile zumeist Schaltnetzteile sind,
+deren Schaltverhalten leistungsabh\"angig geregelt wird:
+Abhängig von der auf der Sekund\"arseite entnommenen Leistung
+wird der eingebaute Transformator betaktet,
+der die 5V und 12V am Ausgang erzeugt.
+In der Regel wird nur eine dieser beiden Ausgangsspannungen
+im Netzteil gemessen und f\"ur die Regelung
+herangezogen\footnote{\url{https://www.technic3d.com/Forum/netzteile/netzeil-extern-benutzen-und-5v-belasten-fur-die-volle-leistung-an-12v/}},
+Auch kann der Tastgrad der Betaktung nicht beliebig klein
+werden\footnote{\url{http://www.mikrocontroller.net/topic/215686}}.
+
+Es sollten also beide Ausgangsspannungen belastet werden,
+um sicherzustellen,
+dass das Netzteil die erforderliche Leistung einspeist
+und die Ausgangsspannung angemessen zu regeln imstande ist.
+

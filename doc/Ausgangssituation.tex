@@ -1,0 +1,56 @@
+
+\section{Ausgangssituation}
+
+\subsection{Adressierbare LEDs}
+An der Haupts\"aule ("Baum") im Baumhaus wurden
+16 LED-Streifen
+von jeweils ca. 2,5m L\"ange angebracht.
+Auf den Streifen befinden sich pro Meter
+60 adressierbare LEDs vom Typ SK6812-WWA.
+Jede LED kann in drei verschiedenen Farben leuchten:
+warmwei{\ss}, kaltwei{\ss} und bernstein.
+Alle drei Farben sind in jeweils
+256 Intensit\"atsabstufungen einstellbar (8 Bit pro Farbe).
+Die LEDs erwarten ihre Konfigurationsbytes
+mit einem Takt von ca. 800kHz
+pulsweitencodiert
+am Dateneingang des LED-Streifens
+(1 Dateneingang pro Streifen).
+
+\subsection{Adapter}
+Es ist derzeit vorgesehen,
+dass insgesamt vier Baum-Adapter
+die 16 LED-Streifen steuern,
+wobei ein Adapter die jeweils vier LED-Streifen
+einer Seite der S\"aule ansteuert.
+Der Adapter ist mit den LED-Streifen
+\"uber Stromversorgungs- und Datenkabel verbunden.
+
+\subsection{Mikrocontroller}
+Die Steuerung der LEDs \"ubernimmt die
+Mikrocontroller-Platine
+Waveshare Core51822\footnote{\url{http://www.waveshare.com/wiki/Core51822}},
+die von der \"ubergeordneten Steuerungseinheit
+(u.a. Raspberry Pi)
+angesprochen wird.
+Der darauf verbaute Mikrocontroller
+nRF51822\footnote{\url{https://www.nordicsemi.com/eng/Products/Bluetooth-low-energy/nRF51822}}
+von Nordic Semiconductor
+koordiniert die auf den LEDs ablaufenden Muster
+durch die Berechnung aller jeweils aktuellen
+LED-Leuchtintensit\"atswerte zu einem Zeitpunkt (Frame)
+und deren regelm\"a{\ss}ige Ausgabe an die LED-Streifen.
+Die Ausgabe erfolgt
+mit einer bestimmten Wiederholrate (Framerate).
+
+\subsection{Montage}
+Die Adapter werden in Aufputzdosen
+auf der S\"aule befestigt.
+Aus den Aufputzdosen werden nach Bedarf
+Kabel zu Netzteil und LEDs herausgef\"uhrt.
+
+\subsection{Stromversorgung}
+Adapter und LEDs jeder S\"aulenseite
+werden von jeweils einem, gemeinsamen
+Netzteil versorgt.
+

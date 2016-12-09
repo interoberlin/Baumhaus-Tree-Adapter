@@ -1,88 +1,11 @@
-\documentclass[a4paper,11pt]{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{siunitx}
-\usepackage[german]{babel} 
-\selectlanguage{german}
-
-\title{Der Baum-Adapter}
-\author{Matthias Bock}
-
-\begin{document}
-
-\maketitle
-
-\section{Kurzbeschreibung}
-
-Der Baum-Adapter ist eine Leiterplatte,
-welche die LEDs an der Haupts\"aule im Baumhaus ansteuert.
-Der Adapter beinhaltet einen Sockel
-f\"ur den Anschluss unserer Mikrocontroller-Platine.
-Ein externes Netzteil ist zur Spannungsversorgung
-von Adapter, Mikrocontroller und LEDs erforderlich.
-
-\newpage
-\section{Kontext}
-
-\subsection{Adressierbare LEDs}
-An der Haupts\"aule ("Baum") im Baumhaus wurden
-16 untereinander unverbundene Streifen
-von jeweils ca. 2,5m L\"ange angebracht.
-Auf den Streifen befinden sich pro Meter
-60 adressierbare LEDs vom Typ SK6812-WWA.
-Jede LED kann in drei verschiedenen Farben leuchten:
-warmwei{\ss}, kaltwei{\ss} und bernstein.
-Alle drei Farben sind in 256 Intensit\"atsabstufungen einstellbar (8 Bit).
-Die insgesamt 24 Bit erwarten die LEDs
-in einem Takt von ca. 800kHz
-pulsweitencodiert
-an ihrem Dateneingang.
-Nachfolgende Bits werden am Datenausgang der LEDs
-an die jeweils nachfolgende LED im Streifen weitergereicht.
-
-\subsection{Adapter}
-Es ist derzeit vorgesehen,
-dass insgesamt vier Baum-Adapter
-alle 16 LED-Streifen steuern,
-wobei ein Adapter die jeweils vier LED-Streifen
-einer Seite der S\"aule ansteuert.
-Der Adapter ist mit den LED-Streifen
-\"uber Stromversorgungs- und Datenkabel verbunden.
-
-\subsection{Mikrocontroller}
-Die Steuerung der LEDs \"ubernimmt die
-Mikrocontroller-Platine Waveshare Core51822,
-die von der \"ubergeordneten Steuerungseinheit
-(z.B. Raspberry Pi)
-angesprochen werden kann.
-Der darauf verbaute Mikrocontroller nRF51822 von Nordic Semiconductor koordiniert die auf den LEDs ablaufenden Muster
-durch die Berechnung aller jeweils aktuellen
-LED-Leuchtintensit\"atswerte zu einem Zeitpunkt (Frame)
-und deren regelm\"a{\ss}ige Ausgabe an die LED-Streifen.
-Die Ausgabe erfolgt
-mit einer bestimmten Wiederholrate (Framerate).
-
-\subsection{Montage}
-Die Adapter werden in Aufputzdosen
-auf der S\"aule befestigt.
-Die Aufputzdosen bestehen aus selbstl\"oschendem Polyvinylchlorid
-mit einer nominalen Temperaturbest\"andigkeit bis 60\si{\degree}C
-sowie einer Flammenwidrigkeit bis 850\si{\degree}C.
-
-\subsection{Stromversorgung}
-Adapter und LEDs jeder S\"aulenseite
-werden von jeweils einem, gemeinsamen
-Netzteil versorgt.
-
-\newpage
 \section{Anforderungen}
 
 \subsection{Gr\"o{\ss}e}
 Der Adapter, mit allen Komponenten aufmontiert,
 muss in den Abmessungen einer Aufputzdose Platz finden.
 
-\subsection{Funktionsumfang}
+\subsection{Funktionalit\"at}
 \subsubsection{LED-Steuerung}
 Der Adapter muss die M\"oglichkeit implementieren,
 vier Ausgangssignale des Mikrocontrollers
@@ -91,13 +14,14 @@ mit den Eing\"angen von vier LED-Streifen zu verbinden.
 \subsubsection{Pegelwandlung}
 Der Adapter muss die LED-Steuersignale des Mikrocontrollers
 von 3.3V auf 5V anheben.
+Das resultierende Signal muss von den LEDs akzeptiert werden.
 
 \subsubsection{Debugging}
-Der Adapter muss eine M\"oglichkeit zum Anschluss
+Der Adapter soll eine M\"oglichkeit zum Anschluss
 eines Debuggers implementieren,
 sodass der Mikrocontroller
 im fertig verbauten Aufputzgeh\"ause
-durch \"Offnen derselben und ohne L\"oten
+durch \"Offnen desselben und ohne L\"oten
 programmiert und gedebuggt werden kann.
 
 \subsubsection{Standby-Power}
@@ -121,7 +45,7 @@ Es m\"ussen Ma{\ss}nahmen getroffen werden, die sicherstellen,
 dass der Adapter,
 die darauf best\"uckten Komponenten
 und der Mikrocontroller
-sich nicht derart erhitzen k\"onnen,
+sich nicht derart erhitzen,
 dass sie Feuer fangen oder die Gefahr besteht,
 dass das Plastik der Aufputzdose
 schmilzt oder Feuer f\"angt.
@@ -134,10 +58,4 @@ als bei maximaler Helligkeit zu erwarten w\"are.
 \subsubsection{Detektion \"uberm\"a{\ss}iger Stromaufnahme vom Netzteil}
 Der Adapter muss in der Lage sein, zu detektieren und zu reagieren,
 wenn dem angeschlossenen Netzteil mehr Leistung entnommen wird,
-als das Netzteil seiner Spezifikation entsprechend maximal liefern kann.
-
-
-\newpage
-\section{Umsetzung}
-
-\end{document}
+als das Netzteil gem\"a{\ss} seiner Spezifikation maximal liefern kann.

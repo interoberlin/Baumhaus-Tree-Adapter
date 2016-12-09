@@ -1,0 +1,42 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{siunitx}
+\usepackage[german]{babel} 
+\selectlanguage{german}
+\usepackage{hyperref}
+
+\title{Der Baum-Adapter}
+\author{Matthias Bock}
+
+\begin{document}
+
+\maketitle
+
+\section{Kurzbeschreibung}
+
+Der Baum-Adapter ist eine Leiterplatte,
+welche die LEDs an der Haupts\"aule im Baumhaus ansteuert.
+Der Adapter beinhaltet einen Sockel
+f\"ur eine Mikrocontroller-Platine
+sowie Anschlussm\"glichkeiten f\"ur LED-Streifen.
+Zum Betrieb von Adapter, Mikrocontroller und LEDs
+ist ein separates Netzteil erforderlich.
+
+\newpage
+\input{Ausgangssituation.tex}
+
+\newpage
+\input{Anforderungen.tex}
+
+\newpage
+\input{Analyse.tex}
+
+\newpage
+%\input{Umsetzung.tex}
+
+\newpage
+%\input{Abkuerzungen.tex}
+
+\end{document}
