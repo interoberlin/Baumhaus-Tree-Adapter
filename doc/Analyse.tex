@@ -47,12 +47,25 @@ Dies entspricht einer maximalen Leistungsaufnahme pro S\"aulenseite von
 \subsection{Temperaturbest\"andigkeit der Aufputzdosen}
 Die Aufputzdosen bestehen laut Angaben des Herstellers
 aus selbstl\"oschendem Polyvinylchlorid
-mit einer nominalen Temperaturbest\"andigkeit bis 60\si{\degree}C
-sowie einer Flammenwidrigkeit bis 850\si{\degree}C.
+mit einer nominalen Temperaturbest\"andigkeit bis 60\si{\degreeCelsius}
+sowie einer Flammenwidrigkeit bis 850\si{\degreeCelsius}.
 
 \subsection{Abmessungen der Aufputzdosen}
 
 TODO
+
+\subsection{Pegelwandlung mit Open Drain ist zu langsam}
+Im Versuch\footnote{\url{https://redmine.interoberlin.de/ticket/1052}}
+hat sich gezeigt,
+dass eine (den Logik-Pegel invertierende) Aufw\"artswandlung
+mithilfe einer Open Drain-Schaltung
+mit dem FET
+2N7000\footnote{\url{https://www.onsemi.com/pub/Collateral/2N7000-D.PDF}}
+f\"ur die Ansteuerung der LEDs nicht in Frage kommt,
+da der Pegel zu langsam wieder ansteigt.
+Es w\"are ein Pull-Up-Widerstand von unter 380$\Omega$ erforderlich,
+der im Dauerbetrieb zu Verlusten und
+unerw\"unschter Erw\"armung f\"uhren w\"urde.
 
 \subsection{ATX-Netzteil-Ausg\"ange m\"ussen belastet werden}
 ATX-Netzteile eignen sich grunds\"atzlich sehr gut
