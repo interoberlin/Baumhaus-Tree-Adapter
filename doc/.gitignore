@@ -1,5 +1,6 @@
 # TeX outputs
 *.aux
+*.toc
 *.out
 *.log
 *.gz
