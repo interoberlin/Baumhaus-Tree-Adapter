@@ -1,0 +1,5 @@
+# TeX outputs
+*.log
+*.gz
+*.aux
+*.pdf
