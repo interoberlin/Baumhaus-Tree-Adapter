@@ -1,0 +1,93 @@
+
+\section{Auswirkungen}
+
+\subsection{Kabeldimensionierung}
+Adapter und LEDs sind über Kabel verbunden.
+Diese sind
+hinsichtlich ihres Kupferquerschnitts
+der Stromaufnahme entsprechend
+dimensioniert:
+
+Pro S\"aulenseite werden maximal 120W aufgenommen
+(siehe \ref{Stromaufnahme-LEDs})
+.
+Die Leistung wird an drei Stellen in die LED-Streifen eingespeist.
+An jeder Einspeisestelle
+werden entsprechend
+$
+\frac{120W}{3} = 40W
+$
+eingespeist.
+
+Am Fu{\ss} der S\"aule werden 5V
+bei maximal
+$
+\frac{40 W}{3} = 13.3 W
+$
+eingespeist.
+Zur Mitte und zum Kopf werden 12V geleitet,
+die ein DC/DC-Wandler
+auf 5V
+herunterkonvertiert.
+Durch die h\"ohere Spannung reduziert sich
+der zum Erreichen der einzuspeisenden Leistung
+erforderliche Stromfluss.
+Der Stromfluss ist f\"ur den
+Spannungsabfall
+im Kabel
+ma{\ss}geblich:
+\begin{center}
+$
+P = {\Delta}U \cdot I = R \cdot I^2
+$
+\end{center}
+
+Der mindestens erforderliche
+Querschnitt A des Kabels
+errechnet sich nach
+\footnote{
+	\url{http://www.elektro-fachplanung.de/Fachinfo/Planungshilfen/Berechnung\_01/berechnung\_01.htm}
+}
+:
+
+\begin{center}
+	$
+	A = \frac{I \cdot 2 \cdot l}{K \cdot U \cdot {\Delta}u}
+	$
+\end{center}
+
+Es flie{\ss}t ein Strom von
+$
+I = 6,67 A
+$
+auf einer L\"ange von
+$
+l = 3m
+$
+bzw.
+der doppelten L\"ange (Hin- und R\"uckleiter)
+.
+
+Der Leitwert von Kupfer betr\"agt
+$
+K = 56 \frac{\Omega \cdot mm^2}m
+$
+.
+
+Es liegt eine Gleichspannung von
+$
+U = 12V
+$
+an.
+
+Der akzeptable Spannungsabfall betrage ${\Delta}U = 6\%$.
+
+Daraus ergibt sich ein erforderlicher Querschnitt
+\footnote{
+\url{https://www.dieleitungsberechnung.de/?page\_id=124}
+}
+von
+$
+1.5mm^2
+$
+.
