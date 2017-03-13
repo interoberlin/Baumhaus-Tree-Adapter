@@ -124,6 +124,40 @@ GenerateClassCluster=0
 DocumentUniqueId=IRLNYIOI
 
 [Document6]
+DocumentPath=lib\Capacitors.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=GJIWOLYG
+
+[Document7]
+DocumentPath=lib\Diodes.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=HRGUSYTD
+
+[Document8]
 DocumentPath=lib\Connectors.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -140,7 +174,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=WMMBXTIG
 
-[Document7]
+[Document9]
 DocumentPath=lib\Headers.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -157,7 +191,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=BSBKMBIQ
 
-[Document8]
+[Document10]
 DocumentPath=lib\Resistors.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -174,7 +208,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SHTFFEUQ
 
-[Document9]
+[Document11]
 DocumentPath=lib\Headers.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -191,7 +225,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=XJSXQNTU
 
-[Document10]
+[Document12]
 DocumentPath=lib\Standard.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -208,7 +242,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=TYJCDBAY
 
-[Document11]
+[Document13]
 DocumentPath=lib\Modules.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -225,7 +259,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=HIXCLNVC
 
-[Document12]
+[Document14]
 DocumentPath=lib\Connectors.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -242,24 +276,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=EYKFGEQX
 
-[Document13]
-DocumentPath=SWD.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=YIQTMIOJ
-
-[Document14]
+[Document15]
 DocumentPath=Top.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -276,7 +293,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SPWFXWUX
 
-[Document15]
+[Document16]
 DocumentPath=Adapter.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -292,23 +309,6 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=SHCCTHFB
-
-[Document16]
-DocumentPath=LED+Transistor.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=BKFAXUTJ
 
 [Document17]
 DocumentPath=Level Shifter.SchDoc
@@ -328,23 +328,6 @@ GenerateClassCluster=0
 DocumentUniqueId=HTUMEDKA
 
 [Document18]
-DocumentPath=Nutzen-1x4.PcbDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=LUHEWXUW
-
-[Document19]
 DocumentPath=Power.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
