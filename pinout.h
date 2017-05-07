@@ -1,5 +1,5 @@
 /**
- * Microcontroller pin functions
+ * Tree adapter functions to nRF51822 pin assignments
  */
 
 #ifndef PINOUT_H
@@ -11,7 +11,6 @@
 #define PIN_LED_DATA4       22
 
 #define PIN_ATX_ON          6
-#define PIN_ATX_OK          4
 
 #define PIN_FUSE_OK         18
 
